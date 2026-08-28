@@ -1,54 +1,1109 @@
-<!-- =========================
-     CONTACT
-========================= -->
+<!DOCTYPE html>
+<html lang="en">
 
-<section class="contact" id="contact">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <div class="section-title">
+    <title>Lakshmi Pravallika | MCA Student Portfolio</title>
 
-        <h2>
-            Contact <span>Me</span>
-        </h2>
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
-        <p>
-            Let's connect
-        </p>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
-    </div>
+    <style>
+
+        /* =========================
+           GENERAL
+        ========================== */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --primary: #6366f1;
+            --secondary: #8b5cf6;
+            --dark: #0f172a;
+            --dark2: #1e293b;
+            --light: #f8fafc;
+            --text: #475569;
+            --white: #ffffff;
+        }
+
+        body {
+            font-family: "Poppins", sans-serif;
+            background: var(--light);
+            color: var(--text);
+            line-height: 1.7;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            color: var(--dark);
+        }
+
+        .section-title span {
+            color: var(--primary);
+        }
+
+        .section-title p {
+            margin-top: 10px;
+            color: #64748b;
+        }
 
 
-    <div class="contact-container">
+        /* =========================
+           NAVIGATION
+        ========================== */
+
+        header {
+            position: fixed;
+            width: 100%;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+
+            background: rgba(15, 23, 42, 0.96);
+
+            backdrop-filter: blur(10px);
+        }
+
+        nav {
+            max-width: 1200px;
+            margin: auto;
+
+            padding: 18px 30px;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 25px;
+            font-weight: 700;
+            color: white;
+        }
+
+        .logo span {
+            color: #818cf8;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 28px;
+        }
+
+        .nav-links a {
+            color: white;
+            font-size: 14px;
+            font-weight: 500;
+
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #818cf8;
+        }
+
+        .menu-btn {
+            display: none;
+
+            color: white;
+
+            font-size: 25px;
+
+            cursor: pointer;
+        }
 
 
-        <div class="contact-info">
+        /* =========================
+           HERO
+        ========================== */
 
-            <h3>
-                Get In Touch
-            </h3>
+        .hero {
+            min-height: 100vh;
 
-            <p>
-                I am open to internship opportunities,
-                projects, collaborations and learning
-                opportunities.
-            </p>
+            display: flex;
+            align-items: center;
+
+            color: white;
+
+            background:
+                radial-gradient(
+                    circle at top right,
+                    #4338ca 0%,
+                    transparent 35%
+                ),
+
+                radial-gradient(
+                    circle at bottom left,
+                    #7c3aed 0%,
+                    transparent 30%
+                ),
+
+                #0f172a;
+
+            padding-top: 120px;
+        }
+
+        .hero-container {
+            max-width: 1200px;
+            width: 100%;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1.2fr 0.8fr;
+
+            gap: 60px;
+
+            align-items: center;
+        }
+
+        .hero-text small {
+            color: #a5b4fc;
+
+            font-size: 17px;
+        }
+
+        .hero-text h1 {
+            font-size: 55px;
+
+            line-height: 1.2;
+
+            margin: 15px 0;
+        }
+
+        .hero-text h1 span {
+            color: #818cf8;
+        }
+
+        .hero-text h2 {
+            font-size: 24px;
+
+            font-weight: 500;
+
+            color: #cbd5e1;
+        }
+
+        .hero-text p {
+            margin: 20px 0;
+
+            max-width: 650px;
+
+            color: #cbd5e1;
+        }
+
+        .buttons {
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+
+            padding: 12px 25px;
+
+            border-radius: 30px;
+
+            margin-right: 10px;
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .btn-primary {
+            color: white;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+        }
+
+        .btn-outline {
+            color: white;
+
+            border: 1px solid #818cf8;
+        }
+
+        .btn:hover {
+            transform: translateY(-3px);
+        }
 
 
-            <!-- EMAIL -->
+        /* =========================
+           PROFILE
+        ========================== */
 
-            <div class="contact-item">
+        .profile-container {
+            display: flex;
 
-                <div class="contact-icon">
-                    ✉
-                </div>
+            justify-content: center;
+        }
 
-                <div>
+        .profile-circle {
+            width: 300px;
+            height: 300px;
 
-                    <strong>
-                        Email
-                    </strong>
+            border-radius: 50%;
 
-                    <a href="mailto:ppravalika986@gmail.com">
-                        ppravalika986@gmail.com
+            padding: 8px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #818cf8,
+                    #c084fc
+                );
+
+            box-shadow:
+                0 0 60px
+                rgba(129, 140, 248, 0.4);
+        }
+
+        .profile-placeholder {
+            width: 100%;
+            height: 100%;
+
+            border-radius: 50%;
+
+            background: #1e293b;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            text-align: center;
+        }
+
+        .profile-placeholder div {
+            font-size: 70px;
+        }
+
+
+        /* =========================
+           ABOUT
+        ========================== */
+
+        .about {
+            background: white;
+        }
+
+        .about-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 40px;
+
+            align-items: center;
+        }
+
+        .about-text h3 {
+            color: var(--dark);
+
+            font-size: 27px;
+
+            margin-bottom: 15px;
+        }
+
+        .about-text p {
+            margin-bottom: 15px;
+        }
+
+        .about-info {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 15px;
+        }
+
+        .info-box {
+            padding: 20px;
+
+            background: #f8fafc;
+
+            border-radius: 12px;
+
+            border-left:
+                4px solid var(--primary);
+        }
+
+        .info-box strong {
+            display: block;
+
+            color: var(--dark);
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           EDUCATION
+        ========================== */
+
+        .education {
+            background: #f1f5f9;
+        }
+
+        .timeline {
+            max-width: 900px;
+
+            margin: auto;
+
+            position: relative;
+        }
+
+        .timeline::before {
+            content: "";
+
+            position: absolute;
+
+            left: 20px;
+
+            top: 0;
+
+            height: 100%;
+
+            width: 3px;
+
+            background:
+                linear-gradient(
+                    var(--primary),
+                    var(--secondary)
+                );
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding-left: 65px;
+
+            margin-bottom: 35px;
+        }
+
+        .timeline-dot {
+            position: absolute;
+
+            left: 10px;
+
+            top: 5px;
+
+            width: 23px;
+
+            height: 23px;
+
+            border-radius: 50%;
+
+            background: var(--primary);
+
+            border: 5px solid #ddd6fe;
+        }
+
+        .timeline-content {
+            background: white;
+
+            padding: 25px;
+
+            border-radius: 15px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.06);
+        }
+
+        .timeline-content h3 {
+            color: var(--primary);
+
+            margin-bottom: 5px;
+        }
+
+        .timeline-content h4 {
+            color: var(--dark);
+
+            margin-bottom: 5px;
+        }
+
+
+        /* =========================
+           SKILLS
+        ========================== */
+
+        .skills {
+            background: white;
+        }
+
+        .skills-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px 50px;
+        }
+
+        .skill-name {
+            display: flex;
+
+            justify-content: space-between;
+
+            margin-bottom: 8px;
+
+            font-weight: 600;
+
+            color: var(--dark);
+        }
+
+        .progress {
+            height: 10px;
+
+            background: #e2e8f0;
+
+            border-radius: 20px;
+
+            overflow: hidden;
+        }
+
+        .progress-bar {
+            height: 100%;
+
+            border-radius: 20px;
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+        }
+
+
+        /* =========================
+           PROJECTS
+        ========================== */
+
+        .projects {
+            background: #f1f5f9;
+        }
+
+        .project-container {
+            max-width: 1100px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
+            gap: 25px;
+        }
+
+        .project-card {
+            background: white;
+
+            padding: 30px;
+
+            border-radius: 18px;
+
+            box-shadow:
+                0 8px 25px
+                rgba(0, 0, 0, 0.06);
+
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-10px);
+
+            box-shadow:
+                0 15px 35px
+                rgba(99, 102, 241, 0.15);
+        }
+
+        .project-icon {
+            width: 55px;
+            height: 55px;
+
+            display: flex;
+
+            align-items: center;
+            justify-content: center;
+
+            background: #eef2ff;
+
+            color: var(--primary);
+
+            border-radius: 12px;
+
+            font-size: 25px;
+
+            margin-bottom: 20px;
+        }
+
+        .project-card h3 {
+            color: var(--dark);
+
+            margin-bottom: 10px;
+        }
+
+        .project-card p {
+            font-size: 14px;
+        }
+
+        .tags {
+            margin-top: 20px;
+        }
+
+        .tags span {
+            display: inline-block;
+
+            padding: 5px 10px;
+
+            margin: 3px;
+
+            background: #eef2ff;
+
+            color: #4f46e5;
+
+            border-radius: 15px;
+
+            font-size: 12px;
+        }
+
+
+        /* =========================
+           CERTIFICATIONS
+        ========================== */
+
+        .certifications {
+            background: white;
+        }
+
+        .cert-container {
+            max-width: 1000px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 25px;
+        }
+
+        .cert-card {
+            padding: 25px;
+
+            border:
+                1px solid #e2e8f0;
+
+            border-radius: 15px;
+
+            transition: 0.3s;
+        }
+
+        .cert-card:hover {
+            border-color: var(--primary);
+
+            transform: translateY(-5px);
+        }
+
+        .cert-card h3 {
+            color: var(--dark);
+        }
+
+        .cert-card p {
+            font-size: 14px;
+
+            margin-top: 5px;
+        }
+
+
+        /* =========================
+           CAREER OBJECTIVE
+        ========================== */
+
+        .objective {
+            background:
+                linear-gradient(
+                    135deg,
+                    #312e81,
+                    #6d28d9
+                );
+
+            color: white;
+
+            text-align: center;
+        }
+
+        .objective .section-title h2 {
+            color: white;
+        }
+
+        .objective p {
+            max-width: 850px;
+
+            margin: auto;
+
+            font-size: 18px;
+
+            color: #e0e7ff;
+        }
+
+
+        /* =========================
+           CONTACT
+        ========================== */
+
+        .contact {
+            background: white;
+        }
+
+        .contact-container {
+            max-width: 900px;
+
+            margin: auto;
+
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 40px;
+        }
+
+        .contact-info h3 {
+            color: var(--dark);
+
+            font-size: 25px;
+
+            margin-bottom: 15px;
+        }
+
+        .contact-item {
+            margin: 20px 0;
+
+            display: flex;
+
+            align-items: center;
+
+            gap: 15px;
+        }
+
+        .contact-icon {
+            width: 45px;
+            height: 45px;
+
+            border-radius: 50%;
+
+            background: #eef2ff;
+
+            color: var(--primary);
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+        }
+
+        .contact-item strong {
+            display: block;
+
+            color: var(--dark);
+        }
+
+        .contact-item a {
+            color: var(--text);
+
+            transition: 0.3s;
+        }
+
+        .contact-item a:hover {
+            color: var(--primary);
+        }
+
+
+        /* =========================
+           CONTACT FORM
+        ========================== */
+
+        .contact-form {
+            background: #f8fafc;
+
+            padding: 30px;
+
+            border-radius: 15px;
+        }
+
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+
+            padding: 13px;
+
+            margin-bottom: 15px;
+
+            border:
+                1px solid #cbd5e1;
+
+            border-radius: 8px;
+
+            font-family: inherit;
+
+            outline: none;
+        }
+
+        .contact-form textarea {
+            height: 120px;
+
+            resize: none;
+        }
+
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: var(--primary);
+        }
+
+        .submit-btn {
+            border: none;
+
+            cursor: pointer;
+
+            color: white;
+
+            padding: 12px 25px;
+
+            border-radius: 25px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            font-weight: 600;
+
+            transition: 0.3s;
+        }
+
+        .submit-btn:hover {
+            transform: translateY(-3px);
+
+            box-shadow:
+                0 8px 20px
+                rgba(99, 102, 241, 0.3);
+        }
+
+
+        /* =========================
+           FOOTER
+        ========================== */
+
+        footer {
+            background: var(--dark);
+
+            color: #cbd5e1;
+
+            text-align: center;
+
+            padding: 25px;
+        }
+
+        footer span {
+            color: #818cf8;
+        }
+
+
+        /* =========================
+           RESPONSIVE DESIGN
+        ========================== */
+
+        @media (max-width: 900px) {
+
+            .hero-container {
+                grid-template-columns: 1fr;
+
+                text-align: center;
+            }
+
+            .profile-container {
+                order: -1;
+            }
+
+            .about-container {
+                grid-template-columns: 1fr;
+            }
+
+            .project-container {
+                grid-template-columns: 1fr 1fr;
+            }
+
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+
+            .contact-container {
+                grid-template-columns: 1fr;
+            }
+
+        }
+
+
+        @media (max-width: 700px) {
+
+            section {
+                padding: 70px 5%;
+            }
+
+            .nav-links {
+
+                position: absolute;
+
+                top: 70px;
+
+                left: 0;
+
+                width: 100%;
+
+                background: #0f172a;
+
+                flex-direction: column;
+
+                align-items: center;
+
+                padding: 20px;
+
+                display: none;
+            }
+
+            .nav-links.active {
+                display: flex;
+            }
+
+            .menu-btn {
+                display: block;
+            }
+
+            .hero-text h1 {
+                font-size: 38px;
+            }
+
+            .hero-text h2 {
+                font-size: 19px;
+            }
+
+            .profile-circle {
+                width: 230px;
+
+                height: 230px;
+            }
+
+            .project-container,
+            .cert-container {
+                grid-template-columns: 1fr;
+            }
+
+            .about-info {
+                grid-template-columns: 1fr;
+            }
+
+            .section-title h2 {
+                font-size: 30px;
+            }
+
+        }
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <header>
+
+        <nav>
+
+            <a href="#home" class="logo">
+                Lakshmi<span>.</span>
+            </a>
+
+
+            <ul class="nav-links" id="navLinks">
+
+                <li>
+                    <a href="#home">
+                        Home
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#about">
+                        About
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#education">
+                        Education
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#skills">
+                        Skills
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#projects">
+                        Projects
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#certifications">
+                        Certifications
+                    </a>
+                </li>
+
+                <li>
+                    <a href="#contact">
+                        Contact
+                    </a>
+                </li>
+
+            </ul>
+
+
+            <div
+                class="menu-btn"
+                onclick="toggleMenu()">
+
+                ☰
+
+            </div>
+
+        </nav>
+
+    </header>
+
+
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section
+        class="hero"
+        id="home">
+
+        <div class="hero-container">
+
+
+            <div class="hero-text">
+
+                <small>
+                    WELCOME TO MY PORTFOLIO
+                </small>
+
+
+                <h1>
+
+                    Hi, I'm
+
+                    <span>
+                        Lakshmi Pravallika
+                    </span>
+
+                </h1>
+
+
+                <h2>
+                    MCA Student & Aspiring Software Professional
+                </h2>
+
+
+                <p>
+
+                    I am currently pursuing Master of Computer
+                    Applications at RVR & JC College of Engineering,
+                    Guntur. I am passionate about programming,
+                    web development, problem solving and learning
+                    new technologies.
+
+                </p>
+
+
+                <div class="buttons">
+
+                    <a
+                        href="#projects"
+                        class="btn btn-primary">
+
+                        View My Projects
+
+                    </a>
+
+
+                    <a
+                        href="#contact"
+                        class="btn btn-outline">
+
+                        Contact Me
+
                     </a>
 
                 </div>
@@ -56,49 +1111,627 @@
             </div>
 
 
-            <!-- LOCATION -->
+            <div class="profile-container">
 
-            <div class="contact-item">
+                <div class="profile-circle">
 
-                <div class="contact-icon">
-                    📍
+                    <div class="profile-placeholder">
+
+                        <div>
+                            👩‍💻
+                        </div>
+
+                    </div>
+
                 </div>
 
-                <div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         ABOUT SECTION
+    ========================== -->
+
+    <section
+        class="about"
+        id="about">
+
+
+        <div class="section-title">
+
+            <h2>
+                About <span>Me</span>
+            </h2>
+
+            <p>
+                Get to know me
+            </p>
+
+        </div>
+
+
+        <div class="about-container">
+
+
+            <div class="about-text">
+
+                <h3>
+                    Hello! I'm Lakshmi Pravallika
+                </h3>
+
+
+                <p>
+
+                    I am an enthusiastic MCA student with a strong
+                    interest in computer applications and software
+                    development.
+
+                </p>
+
+
+                <p>
+
+                    I completed my B.Sc Computers from Sriharsh
+                    Women's Degree College, Macherla.
+
+                </p>
+
+
+                <p>
+
+                    I enjoy learning programming languages,
+                    developing websites and working on practical
+                    projects.
+
+                </p>
+
+
+                <p>
+
+                    I am continuously improving my technical and
+                    communication skills to prepare myself for a
+                    successful career in the IT industry.
+
+                </p>
+
+            </div>
+
+
+            <div class="about-info">
+
+
+                <div class="info-box">
+
+                    <strong>
+                        Name
+                    </strong>
+
+                    Lakshmi Pravallika
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>
+                        Degree
+                    </strong>
+
+                    MCA
+
+                </div>
+
+
+                <div class="info-box">
+
+                    <strong>
+                        College
+                    </strong>
+
+                    RVR & JC College of Engineering
+
+                </div>
+
+
+                <div class="info-box">
 
                     <strong>
                         Location
                     </strong>
 
-                    Guntur, Andhra Pradesh, India
+                    Guntur, Andhra Pradesh
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         EDUCATION SECTION
+    ========================== -->
+
+    <section
+        class="education"
+        id="education">
+
+
+        <div class="section-title">
+
+            <h2>
+                My <span>Education</span>
+            </h2>
+
+            <p>
+                My academic journey
+            </p>
+
+        </div>
+
+
+        <div class="timeline">
+
+
+            <!-- MCA -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Master of Computer Applications (MCA)
+                    </h3>
+
+                    <h4>
+                        RVR & JC College of Engineering, Guntur
+                    </h4>
+
+                    <p>
+                        Currently pursuing MCA with an interest
+                        in software development, programming
+                        and modern technologies.
+                    </p>
 
                 </div>
 
             </div>
 
 
-            <!-- GITHUB -->
+            <!-- BSC -->
 
-            <div class="contact-item">
+            <div class="timeline-item">
 
-                <div class="contact-icon">
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-content">
+
+                    <h3>
+                        B.Sc Computers
+                    </h3>
+
+                    <h4>
+                        Sriharsh Women's Degree College, Macherla
+                    </h4>
+
+                    <p>
+                        Completed Bachelor of Science in Computers
+                        and developed a foundation in computer
+                        science and programming.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- INTERMEDIATE -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-content">
+
+                    <h3>
+                        Intermediate - MPC
+                    </h3>
+
+                    <h4>
+                        Pratibha Junior College, Macherla
+                    </h4>
+
+                    <p>
+                        Completed Intermediate education with
+                        Mathematics, Physics and Chemistry.
+                    </p>
+
+                </div>
+
+            </div>
+
+
+            <!-- 10TH -->
+
+            <div class="timeline-item">
+
+                <div class="timeline-dot"></div>
+
+
+                <div class="timeline-content">
+
+                    <h3>
+                        10th Class
+                    </h3>
+
+                    <h4>
+                        Sriharsh High School, Macherla
+                    </h4>
+
+                    <p>
+                        Completed secondary school education.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS SECTION
+    ========================== -->
+
+    <section
+        class="skills"
+        id="skills">
+
+
+        <div class="section-title">
+
+            <h2>
+                My <span>Skills</span>
+            </h2>
+
+            <p>
+                Technologies and abilities I'm developing
+            </p>
+
+        </div>
+
+
+        <div class="skills-container">
+
+
+            <div>
+
+                <div class="skill-name">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        90%
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:90%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="skill-name">
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        85%
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:85%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="skill-name">
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                    <span>
+                        75%
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:75%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="skill-name">
+
+                    <span>
+                        Python
+                    </span>
+
+                    <span>
+                        75%
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:75%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="skill-name">
+
+                    <span>
+                        Java
+                    </span>
+
+                    <span>
+                        70%
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:70%">
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <div>
+
+                <div class="skill-name">
+
+                    <span>
+                        SQL
+                    </span>
+
+                    <span>
+                        75%
+                    </span>
+
+                </div>
+
+
+                <div class="progress">
+
+                    <div
+                        class="progress-bar"
+                        style="width:75%">
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS SECTION
+    ========================== -->
+
+    <section
+        class="projects"
+        id="projects">
+
+
+        <div class="section-title">
+
+            <h2>
+                My <span>Projects</span>
+            </h2>
+
+            <p>
+                My academic and personal work
+            </p>
+
+        </div>
+
+
+        <div class="project-container">
+
+
+            <!-- PROJECT 1 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
                     💻
                 </div>
 
-                <div>
 
-                    <strong>
-                        GitHub
-                    </strong>
+                <h3>
+                    Student Management System
+                </h3>
 
-                    <a
-                        href="https://github.com/ppravalika986"
-                        target="_blank"
-                        rel="noopener noreferrer">
 
-                        github.com/ppravalika986
+                <p>
 
-                    </a>
+                    A system designed to manage student
+                    information, academic details, marks
+                    and attendance efficiently.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 2 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    🌐
+                </div>
+
+
+                <h3>
+                    Personal Portfolio
+                </h3>
+
+
+                <p>
+
+                    A responsive portfolio website designed
+                    to showcase my education, skills,
+                    projects and career goals.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        HTML
+                    </span>
+
+                    <span>
+                        CSS
+                    </span>
+
+                    <span>
+                        JavaScript
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- PROJECT 3 -->
+
+            <div class="project-card">
+
+                <div class="project-icon">
+                    📱
+                </div>
+
+
+                <h3>
+                    Academic Project
+                </h3>
+
+
+                <p>
+
+                    A practical academic project developed
+                    to apply programming concepts and
+                    improve problem-solving skills.
+
+                </p>
+
+
+                <div class="tags">
+
+                    <span>
+                        Programming
+                    </span>
+
+                    <span>
+                        Database
+                    </span>
+
+                    <span>
+                        Development
+                    </span>
 
                 </div>
 
@@ -106,42 +1739,366 @@
 
         </div>
 
+    </section>
 
-        <!-- CONTACT FORM -->
 
-        <div class="contact-form">
 
-            <input
-                type="text"
-                placeholder="Your Name"
-                required
-            >
+    <!-- =========================
+         CERTIFICATIONS
+    ========================== -->
 
-            <input
-                type="email"
-                placeholder="Your Email"
-                required
-            >
+    <section
+        class="certifications"
+        id="certifications">
 
-            <input
-                type="text"
-                placeholder="Subject"
-            >
 
-            <textarea
-                placeholder="Your Message">
-            </textarea>
+        <div class="section-title">
 
-            <button
-                class="submit-btn"
-                onclick="sendMessage()">
+            <h2>
+                My <span>Certifications</span>
+            </h2>
 
-                Send Message
-
-            </button>
+            <p>
+                Add your completed certifications here
+            </p>
 
         </div>
 
-    </div>
 
-</section>
+        <div class="cert-container">
+
+
+            <div class="cert-card">
+
+                <h3>
+                    Web Development Certification
+                </h3>
+
+                <p>
+                    Add organization name and completion
+                    year here.
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>
+                    Programming Certification
+                </h3>
+
+                <p>
+                    Add your programming certification
+                    details here.
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>
+                    Python Certification
+                </h3>
+
+                <p>
+                    Add your Python certification details here.
+                </p>
+
+            </div>
+
+
+            <div class="cert-card">
+
+                <h3>
+                    Other Certification
+                </h3>
+
+                <p>
+                    Add your other certifications here.
+                </p>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CAREER OBJECTIVE
+    ========================== -->
+
+    <section class="objective">
+
+
+        <div class="section-title">
+
+            <h2>
+                Career Objective
+            </h2>
+
+        </div>
+
+
+        <p>
+
+            To build a successful career in the IT industry
+            by applying my technical knowledge, developing
+            strong programming skills, gaining practical
+            experience and continuously learning emerging
+            technologies. I aim to become a skilled software
+            professional and contribute effectively to an
+            organization.
+
+        </p>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT SECTION
+    ========================== -->
+
+    <section
+        class="contact"
+        id="contact">
+
+
+        <div class="section-title">
+
+            <h2>
+                Contact <span>Me</span>
+            </h2>
+
+            <p>
+                Let's connect
+            </p>
+
+        </div>
+
+
+        <div class="contact-container">
+
+
+            <!-- CONTACT INFORMATION -->
+
+            <div class="contact-info">
+
+                <h3>
+                    Get In Touch
+                </h3>
+
+
+                <p>
+
+                    I am open to internship opportunities,
+                    projects, collaborations and learning
+                    opportunities.
+
+                </p>
+
+
+                <!-- EMAIL -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        ✉
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Email
+                        </strong>
+
+
+                        <a
+                            href="mailto:ppravalika986@gmail.com">
+
+                            ppravalika986@gmail.com
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <!-- LOCATION -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        📍
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            Location
+                        </strong>
+
+                        Guntur, Andhra Pradesh, India
+
+                    </div>
+
+                </div>
+
+
+                <!-- GITHUB -->
+
+                <div class="contact-item">
+
+                    <div class="contact-icon">
+                        💻
+                    </div>
+
+
+                    <div>
+
+                        <strong>
+                            GitHub
+                        </strong>
+
+
+                        <a
+                            href="https://github.com/ppravalika986"
+                            target="_blank"
+                            rel="noopener noreferrer">
+
+                            github.com/ppravalika986
+
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+
+            <!-- CONTACT FORM -->
+
+            <div class="contact-form">
+
+
+                <input
+                    type="text"
+                    placeholder="Your Name"
+                    required>
+
+
+                <input
+                    type="email"
+                    placeholder="Your Email"
+                    required>
+
+
+                <input
+                    type="text"
+                    placeholder="Subject">
+
+
+                <textarea
+                    placeholder="Your Message"></textarea>
+
+
+                <button
+                    class="submit-btn"
+                    onclick="sendMessage()">
+
+                    Send Message
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        <p>
+
+            © 2026
+
+            <span>
+                Lakshmi Pravallika
+            </span>
+
+            . All Rights Reserved.
+
+        </p>
+
+    </footer>
+
+
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script>
+
+
+        /* MOBILE MENU */
+
+        function toggleMenu() {
+
+            const navLinks =
+                document.getElementById("navLinks");
+
+            navLinks.classList.toggle("active");
+
+        }
+
+
+        /* CLOSE MENU AFTER CLICK */
+
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
+
+                link.addEventListener("click", () => {
+
+                    document
+                        .getElementById("navLinks")
+                        .classList.remove("active");
+
+                });
+
+            });
+
+
+        /* CONTACT BUTTON */
+
+        function sendMessage() {
+
+            alert(
+                "Thank you for contacting me! " +
+                "Please connect this form to a backend " +
+                "or email service to receive messages."
+            );
+
+        }
+
+    </script>
+
+</body>
+
+</html>
