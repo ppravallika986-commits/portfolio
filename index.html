@@ -1,20 +1,19 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <title>Lakshmi Pravallika | MCA Student Portfolio</title>
 
-    <!-- Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+        rel="stylesheet">
 
     <style>
-        /* =========================
-           GENERAL STYLES
-        ========================== */
 
         * {
             margin: 0;
@@ -73,7 +72,7 @@
 
 
         /* =========================
-           NAVBAR
+           NAVIGATION
         ========================== */
 
         header {
@@ -82,7 +81,7 @@
             top: 0;
             left: 0;
             z-index: 1000;
-            background: rgba(15, 23, 42, 0.95);
+            background: rgba(15, 23, 42, 0.96);
             backdrop-filter: blur(10px);
         }
 
@@ -138,10 +137,12 @@
             display: flex;
             align-items: center;
             color: white;
+
             background:
                 radial-gradient(circle at top right, #4338ca 0%, transparent 35%),
                 radial-gradient(circle at bottom left, #7c3aed 0%, transparent 30%),
                 #0f172a;
+
             padding-top: 120px;
         }
 
@@ -149,8 +150,10 @@
             max-width: 1200px;
             width: 100%;
             margin: auto;
+
             display: grid;
             grid-template-columns: 1.2fr 0.8fr;
+
             gap: 60px;
             align-items: center;
         }
@@ -209,7 +212,10 @@
             transform: translateY(-3px);
         }
 
-        /* Profile Image */
+
+        /* =========================
+           PROFILE
+        ========================== */
 
         .profile-container {
             display: flex;
@@ -219,27 +225,33 @@
         .profile-circle {
             width: 300px;
             height: 300px;
+
             border-radius: 50%;
             padding: 8px;
+
             background: linear-gradient(135deg, #818cf8, #c084fc);
-            box-shadow: 0 0 60px rgba(129, 140, 248, 0.4);
+
+            box-shadow:
+                0 0 60px rgba(129, 140, 248, 0.4);
         }
 
-        .profile-circle .profile-placeholder {
+        .profile-placeholder {
             width: 100%;
             height: 100%;
+
             border-radius: 50%;
+
             background: #1e293b;
+
             display: flex;
             justify-content: center;
             align-items: center;
+
             text-align: center;
-            color: #cbd5e1;
-            padding: 30px;
         }
 
         .profile-placeholder div {
-            font-size: 65px;
+            font-size: 70px;
         }
 
 
@@ -254,8 +266,10 @@
         .about-container {
             max-width: 1000px;
             margin: auto;
+
             display: grid;
             grid-template-columns: 1fr 1fr;
+
             gap: 40px;
             align-items: center;
         }
@@ -278,8 +292,11 @@
 
         .info-box {
             padding: 20px;
+
             background: #f8fafc;
+
             border-radius: 12px;
+
             border-left: 4px solid var(--primary);
         }
 
@@ -306,36 +323,54 @@
 
         .timeline::before {
             content: "";
+
             position: absolute;
             left: 20px;
             top: 0;
+
             height: 100%;
             width: 3px;
-            background: linear-gradient(var(--primary), var(--secondary));
+
+            background:
+                linear-gradient(
+                    var(--primary),
+                    var(--secondary)
+                );
         }
 
         .timeline-item {
             position: relative;
+
             padding-left: 65px;
+
             margin-bottom: 35px;
         }
 
         .timeline-dot {
             position: absolute;
+
             left: 10px;
             top: 5px;
+
             width: 23px;
             height: 23px;
+
             border-radius: 50%;
+
             background: var(--primary);
+
             border: 5px solid #ddd6fe;
         }
 
         .timeline-content {
             background: white;
+
             padding: 25px;
+
             border-radius: 15px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.06);
         }
 
         .timeline-content h3 {
@@ -359,31 +394,48 @@
 
         .skills-container {
             max-width: 1000px;
+
             margin: auto;
+
             display: grid;
+
             grid-template-columns: 1fr 1fr;
+
             gap: 25px 50px;
         }
 
         .skill-name {
             display: flex;
             justify-content: space-between;
+
             margin-bottom: 8px;
+
             font-weight: 600;
+
             color: var(--dark);
         }
 
         .progress {
             height: 10px;
+
             background: #e2e8f0;
+
             border-radius: 20px;
+
             overflow: hidden;
         }
 
         .progress-bar {
             height: 100%;
+
             border-radius: 20px;
-            background: linear-gradient(90deg, var(--primary), var(--secondary));
+
+            background:
+                linear-gradient(
+                    90deg,
+                    var(--primary),
+                    var(--secondary)
+                );
         }
 
 
@@ -397,40 +449,59 @@
 
         .project-container {
             max-width: 1100px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(3, 1fr);
+
+            grid-template-columns:
+                repeat(3, 1fr);
+
             gap: 25px;
         }
 
         .project-card {
             background: white;
+
             padding: 30px;
+
             border-radius: 18px;
-            box-shadow: 0 8px 25px rgba(0,0,0,0.06);
+
+            box-shadow:
+                0 8px 25px rgba(0, 0, 0, 0.06);
+
             transition: 0.3s;
         }
 
         .project-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 15px 35px rgba(99,102,241,0.15);
+
+            box-shadow:
+                0 15px 35px rgba(99, 102, 241, 0.15);
         }
 
         .project-icon {
             width: 55px;
             height: 55px;
+
             display: flex;
             align-items: center;
             justify-content: center;
+
             background: #eef2ff;
+
             color: var(--primary);
+
             border-radius: 12px;
+
             font-size: 25px;
+
             margin-bottom: 20px;
         }
 
         .project-card h3 {
             color: var(--dark);
+
             margin-bottom: 10px;
         }
 
@@ -444,11 +515,17 @@
 
         .tags span {
             display: inline-block;
+
             padding: 5px 10px;
+
             margin: 3px;
+
             background: #eef2ff;
+
             color: #4f46e5;
+
             border-radius: 15px;
+
             font-size: 12px;
         }
 
@@ -463,21 +540,30 @@
 
         .cert-container {
             max-width: 1000px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: repeat(2, 1fr);
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
             gap: 25px;
         }
 
         .cert-card {
             padding: 25px;
+
             border: 1px solid #e2e8f0;
+
             border-radius: 15px;
+
             transition: 0.3s;
         }
 
         .cert-card:hover {
             border-color: var(--primary);
+
             transform: translateY(-5px);
         }
 
@@ -487,6 +573,7 @@
 
         .cert-card p {
             font-size: 14px;
+
             margin-top: 5px;
         }
 
@@ -496,8 +583,15 @@
         ========================== */
 
         .objective {
-            background: linear-gradient(135deg, #312e81, #6d28d9);
+            background:
+                linear-gradient(
+                    135deg,
+                    #312e81,
+                    #6d28d9
+                );
+
             color: white;
+
             text-align: center;
         }
 
@@ -507,8 +601,11 @@
 
         .objective p {
             max-width: 850px;
+
             margin: auto;
+
             font-size: 18px;
+
             color: #e0e7ff;
         }
 
@@ -523,38 +620,55 @@
 
         .contact-container {
             max-width: 900px;
+
             margin: auto;
+
             display: grid;
-            grid-template-columns: 1fr 1fr;
+
+            grid-template-columns:
+                1fr 1fr;
+
             gap: 40px;
         }
 
         .contact-info h3 {
             color: var(--dark);
+
             font-size: 25px;
+
             margin-bottom: 15px;
         }
 
         .contact-item {
             margin: 20px 0;
+
             display: flex;
+
             align-items: center;
+
             gap: 15px;
         }
 
         .contact-icon {
             width: 45px;
             height: 45px;
+
             border-radius: 50%;
+
             background: #eef2ff;
+
             color: var(--primary);
+
             display: flex;
+
             justify-content: center;
+
             align-items: center;
         }
 
         .contact-item strong {
             display: block;
+
             color: var(--dark);
         }
 
@@ -563,42 +677,67 @@
         }
 
 
-        /* Contact Form */
+        /* =========================
+           CONTACT FORM
+        ========================== */
 
         .contact-form {
             background: #f8fafc;
+
             padding: 30px;
+
             border-radius: 15px;
         }
 
         .contact-form input,
         .contact-form textarea {
+
             width: 100%;
+
             padding: 13px;
+
             margin-bottom: 15px;
+
             border: 1px solid #cbd5e1;
+
             border-radius: 8px;
+
             font-family: inherit;
+
             outline: none;
         }
 
         .contact-form textarea {
             height: 120px;
+
             resize: none;
         }
 
         .contact-form input:focus,
         .contact-form textarea:focus {
+
             border-color: var(--primary);
         }
 
         .submit-btn {
+
             border: none;
+
             cursor: pointer;
+
             color: white;
+
             padding: 12px 25px;
+
             border-radius: 25px;
-            background: linear-gradient(135deg, var(--primary), var(--secondary));
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
             font-weight: 600;
         }
 
@@ -608,9 +747,13 @@
         ========================== */
 
         footer {
+
             background: var(--dark);
+
             color: #cbd5e1;
+
             text-align: center;
+
             padding: 25px;
         }
 
@@ -620,13 +763,14 @@
 
 
         /* =========================
-           RESPONSIVE DESIGN
+           RESPONSIVE
         ========================== */
 
         @media (max-width: 900px) {
 
             .hero-container {
                 grid-template-columns: 1fr;
+
                 text-align: center;
             }
 
@@ -651,6 +795,7 @@
             }
         }
 
+
         @media (max-width: 700px) {
 
             section {
@@ -658,14 +803,23 @@
             }
 
             .nav-links {
+
                 position: absolute;
+
                 top: 70px;
+
                 left: 0;
+
                 width: 100%;
+
                 background: #0f172a;
+
                 flex-direction: column;
+
                 align-items: center;
+
                 padding: 20px;
+
                 display: none;
             }
 
@@ -703,11 +857,14 @@
                 font-size: 30px;
             }
         }
+
     </style>
+
 </head>
 
 
 <body>
+
 
     <!-- =========================
          NAVIGATION
@@ -723,19 +880,33 @@
 
             <ul class="nav-links" id="navLinks">
 
-                <li><a href="#home">Home</a></li>
+                <li>
+                    <a href="#home">Home</a>
+                </li>
 
-                <li><a href="#about">About</a></li>
+                <li>
+                    <a href="#about">About</a>
+                </li>
 
-                <li><a href="#education">Education</a></li>
+                <li>
+                    <a href="#education">Education</a>
+                </li>
 
-                <li><a href="#skills">Skills</a></li>
+                <li>
+                    <a href="#skills">Skills</a>
+                </li>
 
-                <li><a href="#projects">Projects</a></li>
+                <li>
+                    <a href="#projects">Projects</a>
+                </li>
 
-                <li><a href="#certifications">Certifications</a></li>
+                <li>
+                    <a href="#certifications">Certifications</a>
+                </li>
 
-                <li><a href="#contact">Contact</a></li>
+                <li>
+                    <a href="#contact">Contact</a>
+                </li>
 
             </ul>
 
@@ -749,7 +920,7 @@
 
 
     <!-- =========================
-         HERO SECTION
+         HERO
     ========================== -->
 
     <section class="hero" id="home">
@@ -758,7 +929,9 @@
 
             <div class="hero-text">
 
-                <small>WELCOME TO MY PORTFOLIO</small>
+                <small>
+                    WELCOME TO MY PORTFOLIO
+                </small>
 
                 <h1>
                     Hi, I'm
@@ -771,18 +944,20 @@
 
                 <p>
                     I am currently pursuing Master of Computer Applications
-                    at RVR & JC College of Engineering, Guntur. I am passionate
-                    about programming, web development, problem solving and
-                    learning new technologies.
+                    at RVR & JC College of Engineering, Guntur. I am
+                    passionate about programming, web development,
+                    problem solving and learning new technologies.
                 </p>
 
                 <div class="buttons">
 
-                    <a href="#projects" class="btn btn-primary">
+                    <a href="#projects"
+                       class="btn btn-primary">
                         View My Projects
                     </a>
 
-                    <a href="#contact" class="btn btn-outline">
+                    <a href="#contact"
+                       class="btn btn-outline">
                         Contact Me
                     </a>
 
@@ -813,16 +988,20 @@
 
 
     <!-- =========================
-         ABOUT SECTION
+         ABOUT
     ========================== -->
 
     <section class="about" id="about">
 
         <div class="section-title">
 
-            <h2>About <span>Me</span></h2>
+            <h2>
+                About <span>Me</span>
+            </h2>
 
-            <p>Get to know me</p>
+            <p>
+                Get to know me
+            </p>
 
         </div>
 
@@ -831,24 +1010,31 @@
 
             <div class="about-text">
 
-                <h3>Hello! I'm Lakshmi Pravallika</h3>
+                <h3>
+                    Hello! I'm Lakshmi Pravallika
+                </h3>
 
                 <p>
-                    I am an enthusiastic MCA student with a strong interest
-                    in computer applications and software development.
+                    I am an enthusiastic MCA student with a strong
+                    interest in computer applications and software
+                    development.
                 </p>
 
                 <p>
-                    I completed my B.Sc Computers from Sriharsh Women's
-                    Degree College, Macherla. I enjoy learning programming
-                    languages, developing websites and working on practical
+                    I completed my B.Sc Computers from Sriharsh
+                    Women's Degree College, Macherla.
+                </p>
+
+                <p>
+                    I enjoy learning programming languages,
+                    developing websites and working on practical
                     projects.
                 </p>
 
                 <p>
                     I am continuously improving my technical and
-                    communication skills to prepare myself for a successful
-                    career in the IT industry.
+                    communication skills to prepare myself for a
+                    successful career in the IT industry.
                 </p>
 
             </div>
@@ -857,23 +1043,46 @@
             <div class="about-info">
 
                 <div class="info-box">
-                    <strong>Name</strong>
+
+                    <strong>
+                        Name
+                    </strong>
+
                     Lakshmi Pravallika
+
                 </div>
 
+
                 <div class="info-box">
-                    <strong>Degree</strong>
+
+                    <strong>
+                        Degree
+                    </strong>
+
                     MCA
+
                 </div>
 
+
                 <div class="info-box">
-                    <strong>College</strong>
+
+                    <strong>
+                        College
+                    </strong>
+
                     RVR & JC College of Engineering
+
                 </div>
 
+
                 <div class="info-box">
-                    <strong>Location</strong>
+
+                    <strong>
+                        Location
+                    </strong>
+
                     Guntur, Andhra Pradesh
+
                 </div>
 
             </div>
@@ -884,23 +1093,26 @@
 
 
     <!-- =========================
-         EDUCATION SECTION
+         EDUCATION
     ========================== -->
 
     <section class="education" id="education">
 
         <div class="section-title">
 
-            <h2>My <span>Education</span></h2>
+            <h2>
+                My <span>Education</span>
+            </h2>
 
-            <p>My academic journey</p>
+            <p>
+                My academic journey
+            </p>
 
         </div>
 
 
         <div class="timeline">
 
-            <!-- MCA -->
 
             <div class="timeline-item">
 
@@ -908,13 +1120,18 @@
 
                 <div class="timeline-content">
 
-                    <h3>Master of Computer Applications (MCA)</h3>
+                    <h3>
+                        Master of Computer Applications (MCA)
+                    </h3>
 
-                    <h4>RVR & JC College of Engineering, Guntur</h4>
+                    <h4>
+                        RVR & JC College of Engineering, Guntur
+                    </h4>
 
                     <p>
-                        Currently pursuing MCA with an interest in software
-                        development, programming and modern technologies.
+                        Currently pursuing MCA with an interest
+                        in software development, programming
+                        and modern technologies.
                     </p>
 
                 </div>
@@ -922,22 +1139,24 @@
             </div>
 
 
-            <!-- Degree -->
-
             <div class="timeline-item">
 
                 <div class="timeline-dot"></div>
 
                 <div class="timeline-content">
 
-                    <h3>B.Sc Computers</h3>
+                    <h3>
+                        B.Sc Computers
+                    </h3>
 
-                    <h4>Sriharsh Women's Degree College, Macherla</h4>
+                    <h4>
+                        Sriharsh Women's Degree College, Macherla
+                    </h4>
 
                     <p>
-                        Completed Bachelor of Science in Computers and
-                        developed a foundation in computer science and
-                        programming.
+                        Completed Bachelor of Science in Computers
+                        and developed a foundation in computer
+                        science and programming.
                     </p>
 
                 </div>
@@ -945,21 +1164,23 @@
             </div>
 
 
-            <!-- Intermediate -->
-
             <div class="timeline-item">
 
                 <div class="timeline-dot"></div>
 
                 <div class="timeline-content">
 
-                    <h3>Intermediate - MPC</h3>
+                    <h3>
+                        Intermediate - MPC
+                    </h3>
 
-                    <h4>Pratibha Junior College, Macherla</h4>
+                    <h4>
+                        Pratibha Junior College, Macherla
+                    </h4>
 
                     <p>
-                        Completed Intermediate education with Mathematics,
-                        Physics and Chemistry.
+                        Completed Intermediate education with
+                        Mathematics, Physics and Chemistry.
                     </p>
 
                 </div>
@@ -967,17 +1188,19 @@
             </div>
 
 
-            <!-- 10th -->
-
             <div class="timeline-item">
 
                 <div class="timeline-dot"></div>
 
                 <div class="timeline-content">
 
-                    <h3>10th Class</h3>
+                    <h3>
+                        10th Class
+                    </h3>
 
-                    <h4>Sriharsh High School, Macherla</h4>
+                    <h4>
+                        Sriharsh High School, Macherla
+                    </h4>
 
                     <p>
                         Completed secondary school education.
@@ -993,31 +1216,43 @@
 
 
     <!-- =========================
-         SKILLS SECTION
+         SKILLS
     ========================== -->
 
     <section class="skills" id="skills">
 
         <div class="section-title">
 
-            <h2>My <span>Skills</span></h2>
+            <h2>
+                My <span>Skills</span>
+            </h2>
 
-            <p>Technologies and abilities I'm developing</p>
+            <p>
+                Technologies and abilities I'm developing
+            </p>
 
         </div>
 
 
         <div class="skills-container">
 
+
             <div>
 
                 <div class="skill-name">
+
                     <span>HTML</span>
+
                     <span>90%</span>
+
                 </div>
 
                 <div class="progress">
-                    <div class="progress-bar" style="width:90%"></div>
+
+                    <div class="progress-bar"
+                         style="width:90%">
+                    </div>
+
                 </div>
 
             </div>
@@ -1026,12 +1261,19 @@
             <div>
 
                 <div class="skill-name">
+
                     <span>CSS</span>
+
                     <span>85%</span>
+
                 </div>
 
                 <div class="progress">
-                    <div class="progress-bar" style="width:85%"></div>
+
+                    <div class="progress-bar"
+                         style="width:85%">
+                    </div>
+
                 </div>
 
             </div>
@@ -1040,12 +1282,19 @@
             <div>
 
                 <div class="skill-name">
+
                     <span>JavaScript</span>
+
                     <span>75%</span>
+
                 </div>
 
                 <div class="progress">
-                    <div class="progress-bar" style="width:75%"></div>
+
+                    <div class="progress-bar"
+                         style="width:75%">
+                    </div>
+
                 </div>
 
             </div>
@@ -1054,12 +1303,19 @@
             <div>
 
                 <div class="skill-name">
+
                     <span>Python</span>
+
                     <span>75%</span>
+
                 </div>
 
                 <div class="progress">
-                    <div class="progress-bar" style="width:75%"></div>
+
+                    <div class="progress-bar"
+                         style="width:75%">
+                    </div>
+
                 </div>
 
             </div>
@@ -1068,12 +1324,19 @@
             <div>
 
                 <div class="skill-name">
+
                     <span>Java</span>
+
                     <span>70%</span>
+
                 </div>
 
                 <div class="progress">
-                    <div class="progress-bar" style="width:70%"></div>
+
+                    <div class="progress-bar"
+                         style="width:70%">
+                    </div>
+
                 </div>
 
             </div>
@@ -1082,12 +1345,19 @@
             <div>
 
                 <div class="skill-name">
+
                     <span>SQL</span>
+
                     <span>75%</span>
+
                 </div>
 
                 <div class="progress">
-                    <div class="progress-bar" style="width:75%"></div>
+
+                    <div class="progress-bar"
+                         style="width:75%">
+                    </div>
+
                 </div>
 
             </div>
@@ -1098,23 +1368,26 @@
 
 
     <!-- =========================
-         PROJECTS SECTION
+         PROJECTS
     ========================== -->
 
     <section class="projects" id="projects">
 
         <div class="section-title">
 
-            <h2>My <span>Projects</span></h2>
+            <h2>
+                My <span>Projects</span>
+            </h2>
 
-            <p>Some of my academic and personal work</p>
+            <p>
+                My academic and personal work
+            </p>
 
         </div>
 
 
         <div class="project-container">
 
-            <!-- Project 1 -->
 
             <div class="project-card">
 
@@ -1122,23 +1395,26 @@
                     💻
                 </div>
 
-                <h3>Student Management System</h3>
+                <h3>
+                    Student Management System
+                </h3>
 
                 <p>
-                    A system designed to manage student information,
-                    academic details, marks and attendance efficiently.
+                    A system designed to manage student
+                    information, academic details, marks
+                    and attendance efficiently.
                 </p>
 
                 <div class="tags">
+
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>JavaScript</span>
+
                 </div>
 
             </div>
 
-
-            <!-- Project 2 -->
 
             <div class="project-card">
 
@@ -1146,23 +1422,26 @@
                     🌐
                 </div>
 
-                <h3>Personal Portfolio</h3>
+                <h3>
+                    Personal Portfolio
+                </h3>
 
                 <p>
-                    A responsive portfolio website designed to showcase
-                    my education, skills, projects and career goals.
+                    A responsive portfolio website designed
+                    to showcase my education, skills,
+                    projects and career goals.
                 </p>
 
                 <div class="tags">
+
                     <span>HTML</span>
                     <span>CSS</span>
                     <span>JavaScript</span>
+
                 </div>
 
             </div>
 
-
-            <!-- Project 3 -->
 
             <div class="project-card">
 
@@ -1170,17 +1449,22 @@
                     📱
                 </div>
 
-                <h3>Academic Project</h3>
+                <h3>
+                    Academic Project
+                </h3>
 
                 <p>
-                    A practical academic project developed to apply
-                    programming concepts and improve problem-solving skills.
+                    A practical academic project developed
+                    to apply programming concepts and
+                    improve problem-solving skills.
                 </p>
 
                 <div class="tags">
+
                     <span>Programming</span>
                     <span>Database</span>
                     <span>Development</span>
+
                 </div>
 
             </div>
@@ -1194,13 +1478,18 @@
          CERTIFICATIONS
     ========================== -->
 
-    <section class="certifications" id="certifications">
+    <section class="certifications"
+             id="certifications">
 
         <div class="section-title">
 
-            <h2>My <span>Certifications</span></h2>
+            <h2>
+                My <span>Certifications</span>
+            </h2>
 
-            <p>Add your completed certifications here</p>
+            <p>
+                Add your completed certifications here
+            </p>
 
         </div>
 
@@ -1209,10 +1498,13 @@
 
             <div class="cert-card">
 
-                <h3>Web Development Certification</h3>
+                <h3>
+                    Web Development Certification
+                </h3>
 
                 <p>
-                    Add the organization name and completion year here.
+                    Add organization name and completion
+                    year here.
                 </p>
 
             </div>
@@ -1220,10 +1512,13 @@
 
             <div class="cert-card">
 
-                <h3>Programming Certification</h3>
+                <h3>
+                    Programming Certification
+                </h3>
 
                 <p>
-                    Add your programming certification details here.
+                    Add your programming certification
+                    details here.
                 </p>
 
             </div>
@@ -1231,7 +1526,9 @@
 
             <div class="cert-card">
 
-                <h3>Python Certification</h3>
+                <h3>
+                    Python Certification
+                </h3>
 
                 <p>
                     Add your Python certification details here.
@@ -1242,7 +1539,9 @@
 
             <div class="cert-card">
 
-                <h3>Other Certification</h3>
+                <h3>
+                    Other Certification
+                </h3>
 
                 <p>
                     Add your other certifications here.
@@ -1263,16 +1562,20 @@
 
         <div class="section-title">
 
-            <h2>Career Objective</h2>
+            <h2>
+                Career Objective
+            </h2>
 
         </div>
 
         <p>
-            To build a successful career in the IT industry by applying
-            my technical knowledge, developing strong programming skills,
-            gaining practical experience and continuously learning
-            emerging technologies. I aim to become a skilled software
-            professional and contribute effectively to an organization.
+            To build a successful career in the IT industry
+            by applying my technical knowledge, developing
+            strong programming skills, gaining practical
+            experience and continuously learning emerging
+            technologies. I aim to become a skilled software
+            professional and contribute effectively to an
+            organization.
         </p>
 
     </section>
@@ -1286,22 +1589,30 @@
 
         <div class="section-title">
 
-            <h2>Contact <span>Me</span></h2>
+            <h2>
+                Contact <span>Me</span>
+            </h2>
 
-            <p>Let's connect</p>
+            <p>
+                Let's connect
+            </p>
 
         </div>
 
 
         <div class="contact-container">
 
+
             <div class="contact-info">
 
-                <h3>Get In Touch</h3>
+                <h3>
+                    Get In Touch
+                </h3>
 
                 <p>
-                    I am open to internship opportunities, projects,
-                    collaborations and learning opportunities.
+                    I am open to internship opportunities,
+                    projects, collaborations and learning
+                    opportunities.
                 </p>
 
 
@@ -1312,11 +1623,15 @@
                     </div>
 
                     <div>
-                        <strong>Email</strong>
 
-                        <a href="mailto:your-email@gmail.com">
-                            your-email@gmail.com
+                        <strong>
+                            Email
+                        </strong>
+
+                        <a href="mailto:ppravalika986@gmail.com">
+                            ppravalika986@gmail.com
                         </a>
+
                     </div>
 
                 </div>
@@ -1329,25 +1644,13 @@
                     </div>
 
                     <div>
-                        <strong>Location</strong>
+
+                        <strong>
+                            Location
+                        </strong>
+
                         Guntur, Andhra Pradesh, India
-                    </div>
 
-                </div>
-
-
-                <div class="contact-item">
-
-                    <div class="contact-icon">
-                        💼
-                    </div>
-
-                    <div>
-                        <strong>LinkedIn</strong>
-
-                        <a href="#" target="_blank">
-                            Add your LinkedIn profile
-                        </a>
                     </div>
 
                 </div>
@@ -1355,7 +1658,7 @@
             </div>
 
 
-            <!-- Contact Form -->
+            <!-- CONTACT FORM -->
 
             <div class="contact-form">
 
@@ -1377,14 +1680,15 @@
                 >
 
                 <textarea
-                    placeholder="Your Message"
-                ></textarea>
+                    placeholder="Your Message">
+                </textarea>
 
                 <button
                     class="submit-btn"
-                    onclick="sendMessage()"
-                >
+                    onclick="sendMessage()">
+
                     Send Message
+
                 </button>
 
             </div>
@@ -1401,7 +1705,8 @@
     <footer>
 
         <p>
-            © 2026 <span>Lakshmi Pravallika</span>.
+            © 2026
+            <span>Lakshmi Pravallika</span>.
             All Rights Reserved.
         </p>
 
@@ -1414,39 +1719,37 @@
 
     <script>
 
-        // Mobile Navigation
-
         function toggleMenu() {
 
-            const navLinks = document.getElementById("navLinks");
+            const navLinks =
+                document.getElementById("navLinks");
 
             navLinks.classList.toggle("active");
 
         }
 
 
-        // Close mobile menu after clicking a link
+        document
+            .querySelectorAll(".nav-links a")
+            .forEach(link => {
 
-        document.querySelectorAll(".nav-links a").forEach(link => {
+                link.addEventListener("click", () => {
 
-            link.addEventListener("click", () => {
+                    document
+                        .getElementById("navLinks")
+                        .classList.remove("active");
 
-                document
-                    .getElementById("navLinks")
-                    .classList.remove("active");
+                });
 
             });
 
-        });
-
-
-        // Contact form message
 
         function sendMessage() {
 
             alert(
                 "Thank you for contacting me! " +
-                "Please connect your form to a backend or email service."
+                "Please connect this form to a backend " +
+                "or email service to receive messages."
             );
 
         }
@@ -1454,5 +1757,5 @@
     </script>
 
 </body>
-</html>
 
+</html>
